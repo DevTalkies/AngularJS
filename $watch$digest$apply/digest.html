@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="digester">
+
+<!--
+The   $scope.$digest()   function   iterates   through   all   the   watches   in   the   $scope   object,
+and   its   child   $scope   objects   (if it has any).
+When   $digest()   iterates   over   the   watches,   it   calls   the   value   function   for   each   watch.
+If   the   value   returned   by   the   value   function   is   different   than   the   value   it   returned
+the   last   time   it   was   called,   the   listener   function   for   that   watch   is   called.
+
+The   $digest()   function   is   called   whenever   AngularJS   thinks   it   is   necessary.   For   instance,
+after   a   button  click   handler   has   been   executed,   or   after   an   AJAX   call   returns   (after   the   done() /
+fail()   callback   function   has   been   executed).
+
+You   may   encounter   some   corner   cases   where   AngularJS   does   not   call   the   $digest()   function   for   you.
+You   will  usually  detect   that   by   noticing   that   the   data   bindings   do   not   upate   the   displayed   values.
+In   that   case,   call   $scope.$digest()   and   it   should   work.   Or,   you   can   perhaps   use   $scope.$apply()   instead
+-->
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>$digest</title>
+    <script src="../lib/angular/angular.min.js"></script>
+    <script src="controller/digest.js"></script>
+</head>
+<body ng-controller="digest">
+<button ng-click="updateTime()">Update time - ng-click</button>
+<button id="updateTimebtn">Update time</button>
+<br />
+{{datetime | date:'yyyy-MM-dd HH:mm:ss'}}
+
+</body>
+</html>

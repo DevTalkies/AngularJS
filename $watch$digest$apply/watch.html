@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="watcher">
+
+<!--$watch          $digest          $apply          digest loop          Dirty Checking
+
+
+The AngularJS $scope functions $watch(), $digest() and $apply() are some of the central functions in AngularJS.
+
+when   you    do   changes   in   a   variable    on   the   $scope   object    within   your    view,   the   $scope   object
+auto-magically   updates   itself.
+Similarly,   whenever   the   $scope   object   changes,   the   view   updates   itself   with   the   new   value.
+AngularJS   handle   data-binding   mechanism   with   the   help   of   three   powerful   functions:
+ $watch(),   $digest()    and   $apply().-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>$watch $digest $apply</title>
+    <script src="../lib/angular/angular.min.js"></script>
+    <script src="controller/watch.js"></script>
+</head>
+<body ng-controller="myCtrl">
+
+<!--When you create a data binding from somewhere in your view to a variable on the $scope object,
+AngularJS creates a "watch" internally.
+A watch means that AngularJS watches changes in the variable on the $scope object.
+The framework is "watching" the variable. Watches are created using the $scope.$watch() function-->
+
+<input type="text" ng-model="username">
+<br>
+
+<h2>counter:{{counter}}</h2>
+
+</body>
+</html>
