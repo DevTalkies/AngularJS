@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="formApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="../angular-messages.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form class="form-horizontal" name="formValidation" required>
+                        <div class="form-group">
+                            <label for="inputfn3" class="col-sm-2 control-label">First Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="firstName" class="form-control" id="inputfn3" placeholder="First Name" ng-model="firstName" required>
+                            <div ng-messages="formValidation.firstName.$error">
+                                <div ng-message="required" style="color: red">This field is required</div>
+                            </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label for="inputln3" class="col-sm-2 control-label">Last Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="lastName" class="form-control" id="inputln3" placeholder="Last Name" ng-model="lastName" required>
+                            <div ng-messages="formValidation.lastName.$error">
+                                <div ng-message="required" style="color: red">This field is required</div>
+                            </div>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" ng-model="email" required>
+                                <div ng-messages="formValidation.email.$error">
+                                    <div ng-message="required" style="color: red">This field is required</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password" ng-model="password" required>
+                                <div ng-messages="formValidation.password.$error">
+                                    <div ng-message="required" style="color: red">This field is required</div>
+                                    <div ng-message="email">Your email address is invalid</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label for="inputPhone3" class="col-sm-2 control-label">Phone No.</label>
+                            <div class="col-sm-10">
+                                <input type="email" name="phone" class="form-control" id="inputPhone3" placeholder="Phone No"        ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/"
+                                       ng-model="phone" required>
+                                <div ng-messages="formValidation.phone.$error">
+                                    <div ng-message="required" style="color: red">This field is required</div>
+                                    <div ng-message="pattern">Must be a valid 10 digit phone number</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Sign Up</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3"></div>
+
+    </div>
+
+</div>
+</body>
+</html>

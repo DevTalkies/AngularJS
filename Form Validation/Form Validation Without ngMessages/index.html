@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation Without ngMessages</title>
+    <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../bower_components/angular/angular.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form name="userFormValid" class="form-horizontal" ng-submit="submitForm()" novalidate>
+
+                        <div class="form-group">
+                            <label for="inputName3" class="col-sm-2 control-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputName3" placeholder="Name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputUser3" class="col-sm-2 control-label">Username</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputUser3" placeholder="Username">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3"></div>
+
+    </div>
+
+</div>
+</body>
+</html>
