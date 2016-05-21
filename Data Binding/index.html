@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="binding" ng-controller="mainCtrl">
+    <head>
+        <meta charset="UTF-8">
+        <title>{{developer.name}}</title>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+        <link rel="stylesheet" href="custom.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../bower_components/angular/angular.min.js"></script>
+        <script src="../bower_components/angular-animate/angular-animate.js"></script>
+        <script src="../bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="../bower_components/angular-messages/angular-messages.min.js"></script>
+        <script src="../bower_components/angular-material/angular-material.min.js"></script>
+        <script src="custom.js"></script>
+    </head>
+    <body >
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="container-fluid">
+
+                    <div class="row">
+
+                        <div class="col-lg-offset-4 col-lg-4 col-lg-offset-4 cus_div">
+                            <hr class="cus_hr">
+                            <div class="cir_div"><img src="image/logo-default.png"></div>
+                            <h1 class="cus_company cus_font">{{developer.name}}</h1>
+
+                            <h2 class="cus_font_des">{{developer.description}}</h2>
+
+                            <div id="social">
+
+                                <a class="facebookBtn smGlobalBtn" href="{{developer.facebook}}" target="_blank"></a>
+                                <a class="googleBtn smGlobalBtn" href="{{developer.google}}" target="_blank"></a>
+                                <a class="twitterBtn smGlobalBtn" href="{{developer.twitter}}" target="_blank"></a>
+                                <a class="githubBtn smGlobalBtn" href="{{developer.github}}" target="_blank"></a>
+                                <a class="linkedinBtn smGlobalBtn" href="{{developer.linkedin}}" target="_blank"></a>
+
+                            </div>
+
+                            <div class="btn" href="http://devtalkies.com/">Follow Me</div>
+
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top: 20px">
+                        <div class="col-lg-4" style="text-align: center">
+                            <md-input-container>
+                                <label>Company Name</label>
+                                <input type="text" ng-model="developer.name">
+                            </md-input-container>
+
+                            <md-input-container>
+                                <label>Email</label>
+                                <input type="email" ng-model="developer.email">
+                            </md-input-container>
+                        </div>
+                        <div class="col-lg-4" style="text-align: center">
+                            <md-input-container>
+                                <label>Facebook Link</label>
+                                <input type="text" ng-model="developer.facebook">
+                            </md-input-container>
+
+                            <md-input-container>
+                                <label>Twitter Link</label>
+                                <input type="text" ng-model="developer.twitter">
+                            </md-input-container>
+                        </div>
+                        <div class="col-lg-4" style="text-align: center">
+                            <md-input-container>
+                                <label>Google+ Link</label>
+                                <input type="text" ng-model="developer.google">
+                            </md-input-container>
+
+                            <md-input-container>
+                                <label>Github Link</label>
+                                <input type="text" ng-model="developer.github">
+                            </md-input-container>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-offset-4 col-lg-4 col-lg-offset-4" style="text-align: center">
+                            <md-input-container>
+                                <label>LinkedIn Link</label>
+                                <input type="text" ng-model="developer.linkedin">
+                            </md-input-container>
+
+                            <md-input-container>
+                                <label>Description</label>
+                                <input type="text" ng-model="developer.description">
+                            </md-input-container>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+               <!-- <div class="col-md-12">
+                    <div class="col-md-6">
+                        <div class="panel-group" id="accordion1">
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                                  <i class="fa fa-user fa-fw"></i>Company Name
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                Company Name: <input type="text" ng-model="developer.name" placeholder="Full Name" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo">
+                                  <i class="fa fa-star fa-fw"></i>Description
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Description: <input type="text" ng-model="developer.description" placeholder="description" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href="#collapseThree">
+                                  <i class="fa fa-comment fa-fw"></i>Email</a>
+
+                              </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Email: <input type="text" ng-model="developer.email" placeholder="Email-ID" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href="#collapseFour">
+                                  <i class="fa fa-hand-o-right fa-fw"></i>Github
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                <input type="text" ng-model="developer.github" placeholder="Personal Link-1" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href="#collapseFive">
+                                  <i class="fa fa-hand-o-right fa-fw"></i>Facebook
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                http://<input type="text" ng-model="developer.facebook" placeholder="Personal Link-2" />
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href="#collapseSix">
+                                  <i class="fa fa-hand-o-right fa-fw"></i>Google+
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseSix" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                http://<input type="text" ng-model="developer.googleplus" placeholder="Personal Link-2" />
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href="#collapseSeven">
+                                  <i class="fa fa-hand-o-right fa-fw"></i>Twitter
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseSeven" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                http://<input type="text" ng-model="developer.twitter" placeholder="Personal Link-2" />
+                              </div>
+                            </div>
+                          </div>
+
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href="#collapseEight">
+                                  <i class="fa fa-hand-o-right fa-fw"></i>LinkedIN
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseEight" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                http://<input type="text" ng-model="developer.linkedin" placeholder="Personal Link-2" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion1" href="#collapseNine">
+                                  <i class="fa fa-picture-o fa-fw"></i>Company Logo
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="collapseNine" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                http://<input type="text" ng-model="user.companylogo" placeholder="Company Logo URL" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+
+                </div>-->
+            </div>
+
+        </div>
+    </body>
+</html>

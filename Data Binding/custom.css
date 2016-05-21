@@ -1,0 +1,189 @@
+/*body{
+      background-color: #E2E7EB;
+}*/
+
+.cus_div{
+      background: #EC6F66; /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #EC6F66 , #F3A183); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #EC6F66 , #F3A183); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      box-shadow:0 16px 28px 0 rgba(0,0,0,.22),0 25px 55px 0 rgba(0,0,0,.21);
+      margin-top: 50px;
+      height: 500px;
+      position: relative;
+
+
+}
+
+.cus_hr{
+      position: absolute;
+      z-index: -100;
+      top: 30px;
+      right: 0;
+      left: 0;
+      border: 100px;
+}
+
+
+.cir_div{
+      background-color: transparent;
+     margin-top: 55px;
+      margin-right: 0;
+      margin-left: 25%;
+      margin-bottom: 15px;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+
+
+
+}
+
+.cus_font{
+      /*font-family: 'Montserrat', sans-serif;*/
+      font-family: 'Lobster', cursive;
+      font-weight: 400;
+      font-size: 58px;
+      text-align: center;
+      color: #ffffff;
+}
+.cus_font_des{
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      text-align: center;
+      color: #ffffff;
+}
+
+.cus_company{
+      margin-top: 20px;
+}
+
+#social{
+      margin-top: 20px;
+      margin-right: 30px;
+      margin-left: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+}
+
+.smGlobalBtn{
+     display: inline-block;
+   position: relative;
+   cursor: pointer;
+   width: 40px;
+   height: 40px;
+   box-shadow: 0 2px 2px #999;
+   padding: 0px;
+   text-decoration: none;;
+   text-align: center;
+   color: #fff;
+   font-size: 20px;
+   font-weight: normal;
+   line-height: 2em;
+   border-radius: 20px;
+   -moz-border-radius:20px;
+   -webkit-border-radius:20px;
+}
+
+/* facebook button class*/
+.facebookBtn{
+    background: #4060A5;
+
+}
+
+.facebookBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a"; /* add facebook icon */
+}
+
+.facebookBtn:hover{
+    color: #4060A5;
+    background: #fff;
+    text-decoration: none;
+}
+
+
+
+/* google button class*/
+.googleBtn{
+    background: #EA4335;
+}
+
+.googleBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f0d5"; /* add google+ icon */
+}
+
+.googleBtn:hover{
+    color: #EA4335;
+    background: #fff;
+    text-decoration: none;
+}
+
+
+/* twitter button class*/
+.twitterBtn{
+    background: #00ACED;
+}
+
+.twitterBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f099"; /* add twitter icon */
+}
+
+.twitterBtn:hover{
+    color: #00ACED;
+    background: #fff;
+    text-decoration: none;
+}
+
+/* github button class*/
+.githubBtn{
+    background: #4078C0;
+}
+
+.githubBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09b"; /* add github icon */
+}
+
+.githubBtn:hover{
+    color: #4078C0;
+    background: #fff;
+    text-decoration: none;
+}
+
+/* linkedin button class*/
+.linkedinBtn{
+    background: #0077B5;
+}
+
+.linkedinBtn:before{ /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f0e1"; /* add linkedin icon */
+}
+
+.linkedinBtn:hover{
+    color: #0077B5;
+    background: #fff;
+    text-decoration: none;
+}
+
+
+.btn {
+      -webkit-border-radius: 28px;
+      -moz-border-radius: 28px;
+      border-radius: 28px;
+      margin-left: 25%;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 20px;
+      background: #2ab8bf;
+      padding: 15px 60px 15px 60px;
+      text-decoration: none;
+}
+
+.btn:hover {
+      background: #2ab8bf;
+      text-decoration: none;
+}
